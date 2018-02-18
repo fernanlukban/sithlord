@@ -9,7 +9,7 @@ absolute_words_file = open(absolute_words_file_name)
 absolute_words_json = json_load(absolute_words_file)
 absolute_words = set(absolute_words_json['data'])
 
-@app.route("/")
+@app.route("/words")
 def root():
     return ", ".join(absolute_words)
 
